@@ -19,4 +19,16 @@ class Waiter {
 		return name;
 	}
 } 
+
+class MenuItem {
+	private $name;
+	private $price;
+	private $description;
+	
+	public function __construct($n, $p, $desc) {
+		$name = $n;
+		$price = $p;
+		$description = $desc;
+	}
+}
 ################################################################################
