@@ -88,6 +88,13 @@ do {
 		do {
 			printMenu($menu);
 			$choice = trim(fgets($stdin));
+			
+			// Decide what to do based on choice.
+			switch ($choice) {
+				default:
+					echo "BAD THINGS ARE HAPPENING!";
+					die();
+			}
 		} while ($choice);
 		
 		// Force outer loop to continue.
