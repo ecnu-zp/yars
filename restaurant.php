@@ -105,9 +105,6 @@ do {
 			} else if ($choice == count($menu) + 1) {
 				// Subtotal variable
 				$subtotal = 0;
-
-				// Final amount owed after tax
-				$total = 0;
 				
 				// View and possibly pay for bill.
 				echo "Your bill:\n\n";
@@ -116,6 +113,11 @@ do {
 					echo "\t " . $item . "\n";
 					$subtotal += $item->getPrice();
 				}
+
+				// Final amount owed after tax
+				//TODO Apply taxes
+				$total = 0;
+
 				echo "---\n";
 				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
