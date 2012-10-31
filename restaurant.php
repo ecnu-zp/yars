@@ -52,6 +52,11 @@ function printMenu($menu) {
 	echo ($i+1).")\t View/pay bill.\n";
 	echo "?: ";
 }
+
+function applyTax($subtotal) {
+	// Applies HST of 12%
+	return $subtotal*1.12;
+}
 ################################################################################
 
 ### Script execution ###########################################################
@@ -98,29 +103,32 @@ do {
 			} else if ($choice <= count($menu)) {
 				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
-				// Sum variable
-				$sum = 0;
+				// Subtotal variable
+				$subtotal = 0;
+
+				// Final amount owed after tax
+				$total = 0;
 				
 				// View and possibly pay for bill.
 				echo "Your bill:\n\n";
 				echo "---\n";
 				foreach ($myOrder as $item) {
 					echo "\t " . $item . "\n";
-					$sum += $item->getPrice();
+					$subtotal += $item->getPrice();
 				}
 				echo "---\n";
 				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
 				// Option to pay.
-				echo "If you'd like to pay, enter a positive".
+				echo "If you'd like to pay now, enter a positive".
 					" amount of money.\n?: ";
 				$amount = trim(fgets($stdin));
 				if ($amount <= 0) {
 					echo "You may choose to pay before you".
 						" leave.";
-				} else if ($amount <= $sum) {
-				} else {
-					$myWaiter->addToTip($sum - $amount);
+				} else if ($amount < $total) {
+				} else { // if amount >= total
+					$myWaiter->addToTip($total - $amount);
 				}
 			} else {
 				"Invalid input.  Try again.\n\n";
