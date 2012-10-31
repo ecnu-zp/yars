@@ -90,10 +90,12 @@ do {
 			$choice = trim(fgets($stdin));
 			
 			// Decide what to do based on choice.
-			switch ($choice) {
-				default:
-					echo "BAD THINGS ARE HAPPENING!";
-					die();
+			if ($choice == 0)
+			{
+			} else if ($choice <= count($menu)) {
+			} else if ($choice == count($menu))
+			} else {
+				die();
 			}
 		} while ($choice);
 		
