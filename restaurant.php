@@ -32,7 +32,7 @@ class MenuItem {
 	}
 
 	public function getPrice() {
-		return $this->$iprice;
+		return $this->iprice;
 	}
 	
 	public function __toString() {
@@ -96,7 +96,7 @@ do {
 			// Decide what to do based on choice.
 			if ($choice == 0) {
 			} else if ($choice <= count($menu)) {
-				$myOrder[] = $menu[$choice];
+				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
 				// Sum variable
 				$sum = 0;
