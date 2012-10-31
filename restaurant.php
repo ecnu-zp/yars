@@ -54,6 +54,9 @@ function printMenu($menu) {
 // Standard in.
 $stdin = fopen('php://stdin', 'r');
 
+// Waiters array
+$waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
+		
 // Menu array
 $menu = array();
 $menu[] = new MenuItem("Burger", 10.00, "Cheese burger with fries");
@@ -79,9 +82,6 @@ do {
 		// Randomly assign waiter to user
 		$myWaiter = $waiters[rand(0, count($waiters))];
 
-		// Waiters array
-		$waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
-		
 		// List order items.
 		$myOrder = Array();
 		
