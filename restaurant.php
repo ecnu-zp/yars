@@ -92,6 +92,7 @@ do {
 			// Decide what to do based on choice.
 			if ($choice == 0) {
 			} else if ($choice <= count($menu)) {
+				$myOrder[] = $menu[$choice];
 			} else if ($choice == count($menu) + 1) {
 				// View and possibly pay for bill.
 				echo "Your bill:\n\n";
