@@ -30,6 +30,10 @@ class MenuItem {
 		$this->iprice = $p;
 		$this->idescription = $desc;
 	}
+
+	public function getPrice() {
+		return $this->$iprice;
+	}
 	
 	public function __toString() {
 		return $this->iname . ". " . $this->idescription . ": $" .
@@ -102,9 +106,10 @@ do {
 				echo "---\n";
 				foreach ($myOrder as $item) {
 					echo "\t " . $item . "\n";
+					$sum += $item->getPrice();
 				}
 				echo "---\n";
-				echo "Your waiter: $myWaiter->getName()\n";
+				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
 				// Option to pay.
 				echo "If you'd like to pay, enter a positive".
