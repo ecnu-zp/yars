@@ -39,6 +39,18 @@ $waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
 
 // Menu array
 $menu = array();
+
+// Customer loop
+while(true) {
+	// Order loop
+	// TODO Make loop
+}
+
+function printMenu() {
+	for ($i=0; $i<count($menu); $i++) {
+		echo $menu[$i];
+	}
+}
 ################################################################################
 
 ?>
