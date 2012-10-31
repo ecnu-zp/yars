@@ -90,12 +90,19 @@ do {
 			$choice = trim(fgets($stdin));
 			
 			// Decide what to do based on choice.
-			if ($choice == 0)
-			{
+			if ($choice == 0) {
 			} else if ($choice <= count($menu)) {
-			} else if ($choice == count($menu))
+			} else if ($choice == count($menu) + 1) {
+				// View and possibly pay for bill.
+				echo "Your bill:\n\n";
+				echo "---\n";
+				foreach ($myOrder as $item) {
+					echo "\t " . $item . "\n";
+				}
+				echo "---\n";
+				echo "Your waiter: $mywaiter\n";
 			} else {
-				die();
+				"Invalid input.  Try again.\n\n";
 			}
 		} while ($choice);
 		
