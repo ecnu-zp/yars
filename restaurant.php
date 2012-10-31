@@ -34,13 +34,11 @@ class MenuItem {
 ################################################################################
 
 ### Script execution ###########################################################
-if (__FILE__ == $argv[0]) {
-	// Waiters array
-	$waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
-	
-	// Menu array
-	$menu = array();
-}
+// Waiters array
+$waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
+
+// Menu array
+$menu = array();
 ################################################################################
 
 ?>
