@@ -94,6 +94,9 @@ do {
 			} else if ($choice <= count($menu)) {
 				$myOrder[] = $menu[$choice];
 			} else if ($choice == count($menu) + 1) {
+				// Sum variable
+				$sum = 0;
+				
 				// View and possibly pay for bill.
 				echo "Your bill:\n\n";
 				echo "---\n";
@@ -102,6 +105,18 @@ do {
 				}
 				echo "---\n";
 				echo "Your waiter: $mywaiter\n";
+				
+				// Option to pay.
+				echo "If you'd like to pay, enter a positive".
+					" amount of money.\n?: ";
+				$amount = trim(fgets($stdin));
+				if ($amount <= 0) {
+					echo "You may choose to pay before you".
+						" leave."
+				} else if ($amount <= $sum) {
+				} else {
+					myWaiter.addToTip($sum - $amount);
+				}
 			} else {
 				"Invalid input.  Try again.\n\n";
 			}
