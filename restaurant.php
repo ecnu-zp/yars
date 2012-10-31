@@ -90,10 +90,11 @@ do {
 			$choice = trim(fgets($stdin));
 			
 			// Decide what to do based on choice.
-			if ($choice == 0)
-			{
+			if ($choice == 0) {
+				break;
 			} else if ($choice <= count($menu)) {
-			} else if ($choice == count($menu))
+				$myOrder[] = $menu[$choice];
+			} else if ($choice == count($menu)) {
 			} else {
 				die();
 			}
