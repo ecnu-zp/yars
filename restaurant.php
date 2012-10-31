@@ -104,7 +104,7 @@ do {
 					echo "\t " . $item . "\n";
 				}
 				echo "---\n";
-				echo "Your waiter: $mywaiter\n";
+				echo "Your waiter: $myWaiter->getName()\n";
 				
 				// Option to pay.
 				echo "If you'd like to pay, enter a positive".
@@ -112,10 +112,10 @@ do {
 				$amount = trim(fgets($stdin));
 				if ($amount <= 0) {
 					echo "You may choose to pay before you".
-						" leave."
+						" leave.";
 				} else if ($amount <= $sum) {
 				} else {
-					myWaiter.addToTip($sum - $amount);
+					$myWaiter->addToTip($sum - $amount);
 				}
 			} else {
 				"Invalid input.  Try again.\n\n";
