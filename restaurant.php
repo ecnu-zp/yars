@@ -54,7 +54,8 @@ function printMenu($menu) {
 }
 
 function applyTax($sub) {
-	return $sub*1.12;
+	$hst = 1.12; //12% HST
+	return $sub*$hst;
 }
 
 ################################################################################
@@ -123,7 +124,6 @@ do {
 				}
 
 				// Final amount owed after tax
-				//TODO Apply taxes
 				$total = applyTax($subtotal);
 
 				echo "---\n";
