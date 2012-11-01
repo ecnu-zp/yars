@@ -53,10 +53,6 @@ function printMenu($menu) {
 	echo "?: ";
 }
 
-function applyTax($subtotal) {
-	// Applies HST of 12%
-	return $subtotal*1.12;
-}
 ################################################################################
 
 ### Script execution ###########################################################
