@@ -85,7 +85,7 @@ do {
 	// Order loop
 	if ($choice == 1) {
 		// Randomly assign waiter to user
-		$myWaiter = $waiters[rand(0, count($waiters))];
+		$myWaiter = $waiters[rand(0, count($waiters)-1)];
 
 		// List order items.
 		$myOrder = Array();
