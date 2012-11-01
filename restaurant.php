@@ -53,6 +53,10 @@ function printMenu($menu) {
 	echo "?: ";
 }
 
+function applyTax($sub) {
+	return $sub*1.12;
+}
+
 ################################################################################
 
 ### Script execution ###########################################################
@@ -120,7 +124,7 @@ do {
 
 				// Final amount owed after tax
 				//TODO Apply taxes
-				$total = 0;
+				$total = applyTax($subtotal);
 
 				echo "---\n";
                 echo "Subtotal:\t $".number_format($subtotal, 2).
