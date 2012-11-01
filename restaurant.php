@@ -37,7 +37,7 @@ class MenuItem {
 	
 	public function __toString() {
 		return $this->iname . ". " . $this->idescription . ": $" .
-			$this->iprice;
+			number_format($this->iprice, 2);
 	}
 }
 ################################################################################
@@ -80,7 +80,7 @@ do {
 	echo "1)\t Absolutely!\n";
 	echo "?: ";
 	$choice = trim(fgets($stdin));
-	echo "\n";
+	echo "\n\n";
 	
 	// Order loop
 	if ($choice == 1) {
@@ -96,9 +96,14 @@ do {
 		do {
 			printMenu($menu);
 			$choice = trim(fgets($stdin));
+            echo "\n\n";
 			
 			// Decide what to do based on choice.
 			if ($choice == 0) {
+                if (!$hasPaid) {
+                    echo "You must pay before you can leave!\n\n";
+                    $choice = 1;
+                }
 			} else if ($choice <= count($menu)) {
 				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
@@ -118,16 +123,21 @@ do {
 				$total = 0;
 
 				echo "---\n";
+                echo "Subtotal:\t $".number_format($subtotal, 2).
+                    "\n\n";
 				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
 				// Option to pay.
 				echo "If you'd like to pay now, enter a positive".
 					" amount of money.\n?: ";
 				$amount = trim(fgets($stdin));
+                echo "\n\n";
 				if ($amount <= 0) {
-					echo "You may choose to pay before you".
-						" leave.";
+					echo "Make sure you pay before".
+						" you leave!\n\n";
 				} else if ($amount < $total) {
+                    echo "You have not entered a large".
+                        " enough value in.\n\n";
 				} else { // if amount >= total
 					$myWaiter->addToTip($total - $amount);
                     $hasPaid = true;
