@@ -89,6 +89,9 @@ do {
 
 		// List order items.
 		$myOrder = Array();
+        
+        // Flag signalling user has paid.
+        $hasPaid = false;
 		
 		do {
 			printMenu($menu);
@@ -127,6 +130,7 @@ do {
 				} else if ($amount < $total) {
 				} else { // if amount >= total
 					$myWaiter->addToTip($total - $amount);
+                    $hasPaid = true;
 				}
 			} else {
 				"Invalid input.  Try again.\n\n";
