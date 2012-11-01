@@ -100,13 +100,24 @@ do {
 			
 			// Decide what to do based on choice.
 			if ($choice == 0) {
-                if (!$hasPaid) {
+                if (!$hasPaid && count($myOrder) > 0) {
                     echo "You must pay before you can leave!\n\n";
                     $choice = 1;
                 }
 			} else if ($choice <= count($menu)) {
+                if ($hasPaid) {
+                    echo "You've already paid.  Please reenter the ".
+                        "restaurant to buy more food!\n\n";
+                    continue;
+                }
 				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
+                // If the user has paid, don't let them pay again.
+                if ($hasPaid) {
+                    echo "You've already paid!\n\n";
+                    continue;
+                }
+                
 				// Subtotal variable
 				$subtotal = 0;
 				
@@ -137,9 +148,12 @@ do {
 						" you leave!\n\n";
 				} else if ($amount < $total) {
                     echo "You have not entered a large".
-                        " enough value in.\n\n";
+                        " enough value!\n\n";
 				} else { // if amount >= total
-					$myWaiter->addToTip($total - $amount);
+                    echo "You gave a $".
+                        number_format($amount - $total, 2)
+                        ." tip!\n\n";
+					$myWaiter->addToTip($amount - $total);
                     $hasPaid = true;
 				}
 			} else {
