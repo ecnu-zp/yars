@@ -1,0 +1,89 @@
+1.
+	restaurant.php -> restaurant1.php
+	
+	Add the function:
+		function getInput() {
+			$input = trim(fgets(STDIN));
+				echo "\n\n";
+			return $input;
+		}
+	so all the lines
+		$choice = trim(fgets($stdin));
+		echo "\n\n";
+	could be changed to the much more clear
+		$choice = getInput();
+	
+	See lines 97, 107, 162 of restaurant.php, and lines 93, 108, 162 of
+	restaurant1.php for relevent for relevent.
+
+2.
+	restaurant1.php -> restaurant2.php
+	
+	Add the function
+		function printBill($myOrder, &$myWaiter, &$hasPaid, &$choice) {
+			...
+		}
+	so that the condition of the inner loop 
+		} else if ($choice == count($menu) + 1) {
+			if (count($myOrder) == 0) {
+				echo "You have no items to pay for!\n\n";
+				continue;
+			}
+
+			// If the user has paid, don't let them pay again.
+			if ($hasPaid) {
+				echo "You've already paid!\n\n";
+				continue;
+			}
+
+			// Subtotal variable
+			$subtotal = 0;
+
+			// View and possibly pay for bill.
+			echo "Your bill:\n\n";
+			echo "---\n";
+			foreach ($myOrder as $item) {
+				echo "\t " . $item . "\n";
+				$subtotal += $item->getPrice();
+			}
+
+			// Final amount owed after tax
+			$total = applyTax($subtotal);
+
+			echo "---\n";
+			echo "Subtotal:\t $".number_format($subtotal, 2).
+			"\n";
+			echo "Total:\t\t $".number_format($total, 2).
+			"\n\n";
+			echo "Your waiter: " . $myWaiter->getName() . "\n";
+
+			// Option to pay.
+			echo "If you'd like to pay now, enter a positive".
+			" amount of money.\n?: ";
+			$amount = getInput();
+			if ($amount <= 0) {
+				echo "Make sure you pay before".
+				" you leave!\n\n";
+			} else if ($amount < $total) {
+				echo "You have not entered a large".
+				" enough value!\n\n";
+			} else { // if amount >= total
+				echo "You gave a $".
+				number_format($amount - $total, 2)
+				." tip!  Thanks for your business!\n\n";
+				$myWaiter->addToTip($amount - $total);
+				$hasPaid = true;
+				$choice = 0;
+			}
+		} else {
+		...
+	can be simplified to
+		...
+		} else if ($choice == count($menu) + 1) {
+			printBill($myOrder, $myWaiter, $hasPaid, $choice);
+		} else {
+		...
+	so that the inner loop code is easier to understand in one pass.  See
+	line 127 of restaurant1.php and lines 65, 180 of restaurant2.php.
+3.
+	Put it here!
