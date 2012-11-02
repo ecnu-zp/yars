@@ -108,7 +108,10 @@ do {
             echo "\n\n";
 			
 			// Decide what to do based on choice.
-			if ($choice == 0) {
+            if ($choice < 0) {
+                    echo "Invalid input.\n\n";
+                continue;
+            } else if ($choice == 0) {
                 if (!$hasPaid && count($myOrder) > 0) {
                     echo "You must pay before you can leave!\n\n";
                     $choice = 1;
@@ -121,6 +124,11 @@ do {
                 }
 				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
+                if (count($myOrder) == 0) {
+                    echo "You have no items to pay for!\n\n";
+                    continue;
+                }
+                
                 // If the user has paid, don't let them pay again.
                 if ($hasPaid) {
                     echo "You've already paid!\n\n";
@@ -143,6 +151,8 @@ do {
 
 				echo "---\n";
                 echo "Subtotal:\t $".number_format($subtotal, 2).
+                    "\n";
+                echo "Total:\t\t $".number_format($total, 2).
                     "\n\n";
 				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
