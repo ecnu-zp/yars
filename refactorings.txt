@@ -86,4 +86,11 @@
 	so that the inner loop code is easier to understand in one pass.  See
 	line 127 of restaurant1.php and lines 65, 180 of restaurant2.php.
 3.
-	Put it here!
+	restaurant2.php -> restaurant3.php
+
+	Added the function
+		function formatMoney($num) {
+			return $ . number_format($num, 2);
+		}
+	and applied it to all places we had used that number formatting to
+	make it clear that these numbers were being formatted as money.
