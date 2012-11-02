@@ -177,7 +177,7 @@ do {
 // Show each waiter's tips
 echo "Waiter's tips for the night: \n";
 foreach ($waiters as $waiter) {
-	echo $waiter->getName() . ": $" . $waiter->getTips() . "\n";
+	echo $waiter->getName() . ": $" . number_format($waiter->getTips(), 2) . "\n";
 }
 ################################################################################
 
