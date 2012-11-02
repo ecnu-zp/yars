@@ -18,6 +18,10 @@ class Waiter {
 	public function getName() {
 		return $this->wname;
 	}
+
+	public function getTips() {
+		return $this->totalTip;
+	}
 } 
 
 class MenuItem {
@@ -176,8 +180,13 @@ do {
 		// Force outer loop to continue.
 		$choice = 1;
 	}
-} while($choice)
-// TODO: Display statistics about tips.
+} while($choice);
+
+// Show each waiter's tips
+echo "Waiter's tips for the night: \n";
+foreach ($waiters as $waiter) {
+	echo $waiter->getName() . ": $" . $waiter->getTips() . "\n";
+}
 ################################################################################
 
 ?>
