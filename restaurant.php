@@ -151,6 +151,8 @@ do {
 
 				echo "---\n";
                 echo "Subtotal:\t $".number_format($subtotal, 2).
+                    "\n";
+                echo "Total:\t\t $".number_format($total, 2).
                     "\n\n";
 				echo "Your waiter: " . $myWaiter->getName() . "\n";
 				
