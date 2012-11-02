@@ -170,9 +170,10 @@ do {
 				} else { // if amount >= total
                     echo "You gave a $".
                         number_format($amount - $total, 2)
-                        ." tip!\n\n";
+                        ." tip!  Thanks for your business!\n\n";
 					$myWaiter->addToTip($amount - $total);
                     $hasPaid = true;
+                    $choice = 0;
 				}
 			} else {
 				"Invalid input.  Try again.\n\n";
