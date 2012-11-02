@@ -167,7 +167,7 @@ do {
 			} else {
 				"Invalid input.  Try again.\n\n";
 			}
-		} while ($choice);
+		} while ($choice && !$hasPaid);
 		
 		// Force outer loop to continue.
 		$choice = 1;
