@@ -62,12 +62,14 @@ function applyTax($sub) {
 	return $sub*$hst;
 }
 
+function getInput() {
+    $input = trim(fgets(STDIN));
+	echo "\n\n";
+    return $input;
+}
 ################################################################################
 
 ### Script execution ###########################################################
-// Standard in.
-$stdin = fopen('php://stdin', 'r');
-
 // Waiters array
 $waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
 		
@@ -88,8 +90,7 @@ do {
 	echo "0)\t No, thank you.\n";
 	echo "1)\t Absolutely!\n";
 	echo "?: ";
-	$choice = trim(fgets($stdin));
-	echo "\n\n";
+	$choice = getInput();
 	
 	// Order loop
 	if ($choice == 1) {
@@ -104,8 +105,7 @@ do {
 		
 		do {
 			printMenu($menu);
-			$choice = trim(fgets($stdin));
-            echo "\n\n";
+			$choice = getInput();
 			
 			// Decide what to do based on choice.
             if ($choice < 0) {
@@ -159,8 +159,7 @@ do {
 				// Option to pay.
 				echo "If you'd like to pay now, enter a positive".
 					" amount of money.\n?: ";
-				$amount = trim(fgets($stdin));
-                echo "\n\n";
+				$amount = getInput();
 				if ($amount <= 0) {
 					echo "Make sure you pay before".
 						" you leave!\n\n";
@@ -178,7 +177,7 @@ do {
 			} else {
 				"Invalid input.  Try again.\n\n";
 			}
-		} while ($choice && !$hasPaid);
+		} while ($choice);
 		
 		// Force outer loop to continue.
 		$choice = 1;
@@ -188,7 +187,7 @@ do {
 // Show each waiter's tips
 echo "Waiter's tips for the night: \n";
 foreach ($waiters as $waiter) {
-	echo $waiter->getName() . ": $" . number_format($waiter->getTips(), 2) . "\n";
+	echo $waiter->getName() . ": $" . $waiter->getTips() . "\n";
 }
 ################################################################################
 

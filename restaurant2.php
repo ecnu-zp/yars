@@ -62,12 +62,67 @@ function applyTax($sub) {
 	return $sub*$hst;
 }
 
+function printBill($myOrder, &$myWaiter, &$hasPaid, &$choice) {
+    // If the user has paid, don't let them pay again.
+    if ($hasPaid) {
+        echo "You've already paid!\n\n";
+        continue;
+    }
+    
+    if (count($myOrder) == 0) {
+        echo "You have no items to pay for!\n\n";
+        continue;
+    }
+    
+    // Subtotal variable
+    $subtotal = 0;
+    
+    // View and possibly pay for bill.
+    echo "Your bill:\n\n";
+    echo "---\n";
+    foreach ($myOrder as $item) {
+        echo "\t " . $item . "\n";
+        $subtotal += $item->getPrice();
+    }
+
+    // Final amount owed after tax
+    $total = applyTax($subtotal);
+
+    echo "---\n";
+    echo "Subtotal:\t $".number_format($subtotal, 2).
+        "\n";
+    echo "Total:\t\t $".number_format($total, 2).
+        "\n\n";
+    echo "Your waiter: " . $myWaiter->getName() . "\n";
+    
+    // Option to pay.
+    echo "If you'd like to pay now, enter a positive".
+        " amount of money.\n?: ";
+    $amount = getInput();
+    if ($amount <= 0) {
+        echo "Make sure you pay before".
+            " you leave!\n\n";
+    } else if ($amount < $total) {
+        echo "You have not entered a large".
+            " enough value!\n\n";
+    } else { // if amount >= total
+        echo "You gave a $".
+            number_format($amount - $total, 2)
+            ." tip!  Thanks for your business!\n\n";
+        $myWaiter->addToTip($amount - $total);
+        $hasPaid = true;
+        $choice = 0;
+    }
+}
+
+function getInput() {
+    $input = trim(fgets(STDIN));
+	echo "\n\n";
+    return $input;
+}
 ################################################################################
 
 ### Script execution ###########################################################
-// Standard in.
-$stdin = fopen('php://stdin', 'r');
-
 // Waiters array
 $waiters = array(new Waiter("Cody"), new Waiter("Graeme"));
 		
@@ -88,8 +143,7 @@ do {
 	echo "0)\t No, thank you.\n";
 	echo "1)\t Absolutely!\n";
 	echo "?: ";
-	$choice = trim(fgets($stdin));
-	echo "\n\n";
+	$choice = getInput();
 	
 	// Order loop
 	if ($choice == 1) {
@@ -104,8 +158,7 @@ do {
 		
 		do {
 			printMenu($menu);
-			$choice = trim(fgets($stdin));
-            echo "\n\n";
+			$choice = getInput();
 			
 			// Decide what to do based on choice.
             if ($choice < 0) {
@@ -124,61 +177,11 @@ do {
                 }
 				$myOrder[] = $menu[$choice-1];
 			} else if ($choice == count($menu) + 1) {
-                if (count($myOrder) == 0) {
-                    echo "You have no items to pay for!\n\n";
-                    continue;
-                }
-                
-                // If the user has paid, don't let them pay again.
-                if ($hasPaid) {
-                    echo "You've already paid!\n\n";
-                    continue;
-                }
-                
-				// Subtotal variable
-				$subtotal = 0;
-				
-				// View and possibly pay for bill.
-				echo "Your bill:\n\n";
-				echo "---\n";
-				foreach ($myOrder as $item) {
-					echo "\t " . $item . "\n";
-					$subtotal += $item->getPrice();
-				}
-
-				// Final amount owed after tax
-				$total = applyTax($subtotal);
-
-				echo "---\n";
-                echo "Subtotal:\t $".number_format($subtotal, 2).
-                    "\n";
-                echo "Total:\t\t $".number_format($total, 2).
-                    "\n\n";
-				echo "Your waiter: " . $myWaiter->getName() . "\n";
-				
-				// Option to pay.
-				echo "If you'd like to pay now, enter a positive".
-					" amount of money.\n?: ";
-				$amount = trim(fgets($stdin));
-                echo "\n\n";
-				if ($amount <= 0) {
-					echo "Make sure you pay before".
-						" you leave!\n\n";
-				} else if ($amount < $total) {
-                    echo "You have not entered a large".
-                        " enough value!\n\n";
-				} else { // if amount >= total
-                    echo "You gave a $".
-                        number_format($amount - $total, 2)
-                        ." tip!  Thanks for your business!\n\n";
-					$myWaiter->addToTip($amount - $total);
-                    $hasPaid = true;
-                    $choice = 0;
-				}
+                printBill($myOrder, $myWaiter, $hasPaid, $choice);
 			} else {
 				"Invalid input.  Try again.\n\n";
 			}
-		} while ($choice && !$hasPaid);
+		} while ($choice);
 		
 		// Force outer loop to continue.
 		$choice = 1;
@@ -188,7 +191,7 @@ do {
 // Show each waiter's tips
 echo "Waiter's tips for the night: \n";
 foreach ($waiters as $waiter) {
-	echo $waiter->getName() . ": $" . number_format($waiter->getTips(), 2) . "\n";
+	echo $waiter->getName() . ": $" . $waiter->getTips() . "\n";
 }
 ################################################################################
 
