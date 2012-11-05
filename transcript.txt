@@ -1,0 +1,376 @@
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 2
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 4
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 3
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 2
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Fries. Freshcut: $8.00
+	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+	 Calamari. Fried squid: $12.00
+	 Cola. Large glass: $1.00
+	 Fries. Freshcut: $8.00
+	 Burger. Cheese burger with fries: $10.00
+---
+Subtotal:	 $44.50
+Total:		 $49.84
+
+Your waiter: Cody
+If you'd like to pay now, enter a positive amount of money.
+?: 56
+
+
+You gave a $6.16 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 2
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Fries. Freshcut: $8.00
+---
+Subtotal:	 $8.00
+Total:		 $8.96
+
+Your waiter: Graeme
+If you'd like to pay now, enter a positive amount of money.
+?: 15
+
+
+You gave a $6.04 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Cola. Large glass: $1.00
+	 Cola. Large glass: $1.00
+	 Cola. Large glass: $1.00
+---
+Subtotal:	 $3.00
+Total:		 $3.36
+
+Your waiter: Cody
+If you'd like to pay now, enter a positive amount of money.
+?: 90
+
+
+You gave a $86.64 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Burger. Cheese burger with fries: $10.00
+	 Cola. Large glass: $1.00
+---
+Subtotal:	 $11.00
+Total:		 $12.32
+
+Your waiter: Cody
+If you'd like to pay now, enter a positive amount of money.
+?: 13
+
+
+You gave a $0.68 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 2
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 4
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Fries. Freshcut: $8.00
+	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+---
+Subtotal:	 $13.50
+Total:		 $15.12
+
+Your waiter: Cody
+If you'd like to pay now, enter a positive amount of money.
+?: 23
+
+
+You gave a $7.88 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 1
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 3
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 3
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 5
+
+
+0)	 I am done!
+1)	 Burger. Cheese burger with fries: $10.00
+2)	 Fries. Freshcut: $8.00
+3)	 Calamari. Fried squid: $12.00
+4)	 Pint of Hefeweizen. Wheat beer.  With orange: $5.50
+5)	 Cola. Large glass: $1.00
+6)	 View/pay bill.
+?: 6
+
+
+Your bill:
+
+---
+	 Calamari. Fried squid: $12.00
+	 Calamari. Fried squid: $12.00
+	 Cola. Large glass: $1.00
+---
+Subtotal:	 $25.00
+Total:		 $28.00
+
+Your waiter: Graeme
+If you'd like to pay now, enter a positive amount of money.
+?: 100
+
+
+You gave a $72.00 tip!  Thanks for your business!
+
+Hello there.  Would you like a seat?
+0)	 No, thank you.
+1)	 Absolutely!
+?: 0
+
+
+Waiter's tips for the night: 
+Cody: $101.36
+Graeme: $78.04
